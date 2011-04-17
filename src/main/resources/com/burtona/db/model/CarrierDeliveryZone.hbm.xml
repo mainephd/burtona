@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.CarrierDeliveryZone" table="carrier_delivery_zone" catalog="burtona">
+        <id name="carrierDeliveryZoneId" type="java.lang.Integer">
+            <column name="carrierDeliveryZoneID" />
+            <generator class="identity" />
+        </id>
+        <property name="carrierId" type="int">
+            <column name="carrierID" not-null="true" />
+        </property>
+        <property name="stateCode" type="string">
+            <column name="stateCode" length="2" not-null="true" />
+        </property>
+        <property name="zipCode" type="string">
+            <column name="zipCode" length="11" not-null="true" />
+        </property>
+        <property name="countryId" type="int">
+            <column name="countryID" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

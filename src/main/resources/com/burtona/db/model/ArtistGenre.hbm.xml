@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.ArtistGenre" table="artist_genre" catalog="burtona">
+        <id name="genreId" type="long">
+            <column name="genreID" />
+            <generator class="assigned" />
+        </id>
+        <property name="genreDesc" type="string">
+            <column name="genreDesc" length="200" not-null="true" />
+        </property>
+        <property name="parentGenreId" type="java.lang.Long">
+            <column name="parentGenreID" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.ArtistLabel" table="artist_label" catalog="burtona">
+        <id name="labelId" type="java.lang.Integer">
+            <column name="labelID" />
+            <generator class="identity" />
+        </id>
+        <property name="labelName" type="string">
+            <column name="labelName" length="200" not-null="true" />
+        </property>
+        <property name="labelWebSite" type="string">
+            <column name="labelWebSite" length="200" not-null="true" />
+        </property>
+        <property name="labelPhoneNumber" type="string">
+            <column name="labelPhoneNumber" length="30" not-null="true" />
+        </property>
+        <property name="labelStreetAddress" type="string">
+            <column name="labelStreetAddress" length="200" not-null="true" />
+        </property>
+        <property name="labelState" type="string">
+            <column name="labelState" length="2" not-null="true" />
+        </property>
+        <property name="labelZipCode" type="string">
+            <column name="labelZipCode" length="10" not-null="true" />
+        </property>
+        <property name="labelCountryCode" type="int">
+            <column name="labelCountryCode" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

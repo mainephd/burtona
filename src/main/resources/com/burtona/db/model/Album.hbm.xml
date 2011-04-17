@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.Album" table="album" catalog="burtona">
+        <id name="albumId" type="java.lang.Long">
+            <column name="albumID" />
+            <generator class="identity" />
+        </id>
+        <property name="albumTitle" type="string">
+            <column name="albumTitle" length="200" not-null="true" />
+        </property>
+        <property name="releaseDate" type="date">
+            <column name="releaseDate" length="10" not-null="true" />
+        </property>
+        <property name="artistId" type="long">
+            <column name="artistID" not-null="true" />
+        </property>
+        <property name="labelId" type="int">
+            <column name="labelID" not-null="true" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="price" precision="10" not-null="true" />
+        </property>
+        <property name="trackCount" type="int">
+            <column name="trackCount" not-null="true" />
+        </property>
+        <property name="userRating" type="int">
+            <column name="userRating" not-null="true" />
+        </property>
+        <property name="genreId" type="int">
+            <column name="genreID" not-null="true" />
+        </property>
+        <property name="artWorkLocation" type="string">
+            <column name="artWorkLocation" length="200" not-null="true" />
+        </property>
+        <property name="itemTypeId" type="int">
+            <column name="itemTypeID" not-null="true" />
+        </property>
+        <property name="albumApprovalStatus" type="int">
+            <column name="albumApprovalStatus" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

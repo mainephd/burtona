@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.Artist" table="artist" catalog="burtona">
+        <id name="artistId" type="java.lang.Long">
+            <column name="artistID" />
+            <generator class="identity" />
+        </id>
+        <property name="memberId" type="long">
+            <column name="memberID" not-null="true" />
+        </property>
+        <property name="artistName" type="string">
+            <column name="artistName" length="200" not-null="true" />
+        </property>
+        <property name="artistProfileAddress" type="string">
+            <column name="artistProfileAddress" length="200" not-null="true" />
+        </property>
+        <property name="labelId" type="long">
+            <column name="labelID" not-null="true" />
+        </property>
+        <property name="genreId" type="long">
+            <column name="genreID" not-null="true" />
+        </property>
+        <property name="artistBio" type="string">
+            <column name="artistBio" not-null="true" />
+        </property>
+        <property name="artistFanPage" type="string">
+            <column name="artistFanPage" length="200" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

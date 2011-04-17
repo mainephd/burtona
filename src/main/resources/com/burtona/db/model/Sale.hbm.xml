@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.Sale" table="sale" catalog="burtona">
+        <id name="saleId" type="java.lang.Long">
+            <column name="saleID" />
+            <generator class="identity" />
+        </id>
+        <property name="memberId" type="long">
+            <column name="memberID" not-null="true" />
+        </property>
+        <property name="ordDate" type="date">
+            <column name="ordDate" length="10" not-null="true" />
+        </property>
+        <property name="shpDate" type="date">
+            <column name="shpDate" length="10" />
+        </property>
+        <property name="saleStatus" type="int">
+            <column name="saleStatus" not-null="true" />
+        </property>
+        <property name="expectedArrivalDate" type="date">
+            <column name="expectedArrivalDate" length="10" />
+        </property>
+        <property name="trackingNumber" type="string">
+            <column name="trackingNumber" length="30" />
+        </property>
+        <property name="carrierId" type="java.lang.Integer">
+            <column name="carrierID" />
+        </property>
+        <property name="paymentType" type="int">
+            <column name="paymentType" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

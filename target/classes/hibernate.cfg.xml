@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">javadude</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/burtona</property>
+        <property name="hibernate.connection.username">javauser</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+         <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        
+        <mapping resource="com/burtona/db/model/DeliveryType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Member.hbm.xml" />
+        <mapping resource="com/burtona/db/model/AlbumApprovalStatus.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MemberEducation.hbm.xml" />
+        <mapping resource="com/burtona/db/model/SaleStatus.hbm.xml" />
+        <mapping resource="com/burtona/db/model/SaleItem.hbm.xml" />
+        <mapping resource="com/burtona/db/model/ArtistGenre.hbm.xml" />
+        <mapping resource="com/burtona/db/model/CarrierStatus.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MemberEducationDegreeType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/CountryCode.hbm.xml" />
+        <mapping resource="com/burtona/db/model/AlbumTrack.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MediaType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Carrier.hbm.xml" />
+        <mapping resource="com/burtona/db/model/ArtistLabel.hbm.xml" />
+        <mapping resource="com/burtona/db/model/SaleItemType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Album.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Sale.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Media.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MediaComment.hbm.xml" />
+        <mapping resource="com/burtona/db/model/CarrierDeliveryZone.hbm.xml" />
+        <mapping resource="com/burtona/db/model/Artist.hbm.xml" />
+        <mapping resource="com/burtona/db/model/AlbumReview.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MemberEducationType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/SalePaymentType.hbm.xml" />
+        <mapping resource="com/burtona/db/model/AlbumComment.hbm.xml" />
+        <mapping resource="com/burtona/db/model/DeliveryStatus.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MediaTag.hbm.xml" />
+        <mapping resource="com/burtona/db/model/MemberStatusType.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

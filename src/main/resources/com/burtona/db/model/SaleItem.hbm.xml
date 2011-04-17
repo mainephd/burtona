@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.SaleItem" table="sale_item" catalog="burtona">
+        <composite-id name="id" class="com.burtona.db.model.SaleItemId">
+            <key-property name="saleId" type="long">
+                <column name="saleID" />
+            </key-property>
+            <key-property name="itemId" type="long">
+                <column name="itemID" />
+            </key-property>
+        </composite-id>
+        <property name="itemType" type="int">
+            <column name="itemType" not-null="true" />
+        </property>
+        <property name="itemPrice" type="float">
+            <column name="itemPrice" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="itemQty" type="float">
+            <column name="itemQty" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="itemDeliveryStatus" type="int">
+            <column name="itemDeliveryStatus" not-null="true" />
+        </property>
+        <property name="itemDeliveryType" type="int">
+            <column name="itemDeliveryType" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

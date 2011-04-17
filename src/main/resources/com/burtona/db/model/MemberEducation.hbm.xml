@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.MemberEducation" table="member_education" catalog="burtona">
+        <id name="memberId" type="long">
+            <column name="memberID" />
+            <generator class="assigned" />
+        </id>
+        <property name="educationType" type="int">
+            <column name="educationType" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="200" not-null="true" />
+        </property>
+        <property name="yearStarted" type="int">
+            <column name="yearStarted" not-null="true" />
+        </property>
+        <property name="yearLeft" type="int">
+            <column name="yearLeft" not-null="true" />
+        </property>
+        <property name="degreeEarnedType" type="int">
+            <column name="degreeEarnedType" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

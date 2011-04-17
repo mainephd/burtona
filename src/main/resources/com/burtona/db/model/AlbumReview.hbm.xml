@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 17, 2011 3:59:13 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.burtona.db.model.AlbumReview" table="album_review" catalog="burtona">
+        <id name="reviewId" type="java.lang.Long">
+            <column name="reviewID" />
+            <generator class="identity" />
+        </id>
+        <property name="albumId" type="long">
+            <column name="albumID" not-null="true" />
+        </property>
+        <property name="memberId" type="long">
+            <column name="memberID" not-null="true" />
+        </property>
+        <property name="albumReview" type="string">
+            <column name="albumReview" not-null="true" />
+        </property>
+        <property name="lastUpdateTs" type="timestamp">
+            <column name="lastUpdateTS" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
