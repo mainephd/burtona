@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServlet;
 
 import com.burtona.manager.AccountManager;
 import com.burtona.manager.StoreManager;
-import com.burtona.manager.UserManager;
+import com.burtona.manager.MemberManager;
 
 /**
  * Servlet implementation class BuildCache
@@ -24,7 +24,7 @@ public class InitializeApplication extends HttpServlet {
     {
     	ServiceLocator.getInstance();
     	AccountManager.getInstance();
-    	UserManager.getInstance();
+    	MemberManager.getInstance();
     	StoreManager.getInstance();
     }
 }
