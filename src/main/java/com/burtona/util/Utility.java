@@ -30,7 +30,6 @@ import com.burtona.db.model.SaleItemType;
 import com.burtona.db.model.SalePaymentType;
 import com.burtona.db.model.SaleStatus;
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import com.thoughtworks.xstream.io.json.JsonHierarchicalStreamDriver;
 
 public class Utility {
