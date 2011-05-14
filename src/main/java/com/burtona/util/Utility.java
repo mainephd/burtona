@@ -1,5 +1,7 @@
 package com.burtona.util;
 
+import com.burtona.bl.Content;
+import com.burtona.bl.FrontPageContent;
 import com.burtona.db.model.Album;
 import com.burtona.db.model.AlbumApprovalStatus;
 import com.burtona.db.model.AlbumComment;
@@ -73,7 +75,8 @@ public class Utility {
 		xmlstream.alias("salestatus", SaleStatus.class);
 		xmlstream.alias("saleitemtype", SaleItemType.class);
 		xmlstream.alias("salepaymenttype", SalePaymentType.class);
-		
+		xmlstream.alias("content", FrontPageContent.class);
+		xmlstream.alias("item", Content.class);
 		xmlstream.setMode(XStream.NO_REFERENCES);
 		
 		jsonstream.alias("album", Album.class);
@@ -113,6 +116,8 @@ public class Utility {
 		jsonstream.alias("saleitemtype", SaleItemType.class);
 		jsonstream.alias("salepaymenttype", SalePaymentType.class);
 		
+		jsonstream.alias("content", FrontPageContent.class);
+		jsonstream.alias("item", Content.class);
 		jsonstream.setMode(XStream.NO_REFERENCES);
 	}
 	
