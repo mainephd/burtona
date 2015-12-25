@@ -23,7 +23,7 @@ private static final transient Logger logger = Logger.getLogger(StoreService.cla
 	
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	@Path("degreetype")
+	@Path("degreetype-s")
 	public Object getMemberEducationDegreeTypeXML(){
 		try
 		{
